@@ -1,0 +1,226 @@
+{
+  "info": {
+    "_postman_id": "0520c4a8-4c90-4bfd-be59-197b130fc372",
+    "name": "Research Opportunity Portal API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58643068",
+    "_collection_link": "https://go.postman.co/collection/58643068-0520c4a8-4c90-4bfd-be59-197b130fc372?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Opportunity 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"AI for Crop Disease Detection\",\r\n  \"description\": \"Build a deep learning model to detect diseases in crop leaf images.\",\r\n  \"research_area\": \"Artificial Intelligence\",\r\n  \"faculty_name\": \"Dr. Ahmed Khan\",\r\n  \"department\": \"Computer Science\",\r\n  \"required_skills\": \"Python, PyTorch, Image Processing\",\r\n  \"positions\": 3,\r\n  \"deadline\": \"2026-12-31\",\r\n  \"status\": \"Open\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Opportunity 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Blockchain for Secure Medical Records\",\r\n  \"description\": \"Design a blockchain based system for sharing patient records securely.\",\r\n  \"research_area\": \"Cyber Security\",\r\n  \"faculty_name\": \"Dr. Sara Malik\",\r\n  \"department\": \"Software Engineering\",\r\n  \"required_skills\": \"Solidity, Node.js, Cryptography\",\r\n  \"positions\": 2,\r\n  \"deadline\": \"2026-11-30\",\r\n  \"status\": \"Open\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Opportunity 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Urdu Sentiment Analysis using NLP\",\r\n  \"description\": \"Collect an Urdu dataset and train models for sentiment classification.\",\r\n  \"research_area\": \"Natural Language Processing\",\r\n  \"faculty_name\": \"Dr. Imran Ali\",\r\n  \"department\": \"Computer Science\",\r\n  \"required_skills\": \"Python, NLP, Data Cleaning\",\r\n  \"positions\": 4,\r\n  \"deadline\": \"2026-12-15\",\r\n  \"status\": \"Open\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Opportunities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get One Opportunity",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/9",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Opportunity",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Urdu Sentiment Analysis using Deep Learning\",\r\n  \"required_skills\": \"Python, NLP, PyTorch\",\r\n  \"positions\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/9",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Close Opportunity",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"Closed\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/9",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Opportunity",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/9",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Deleted Opportunity (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/9",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid Data (400)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Incomplete Opportunity\",\r\n  \"positions\": -2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}",
+          "host": [
+            "{{baseUrl}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
