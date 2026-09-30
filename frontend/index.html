@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Opportunity Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>University Research Opportunity Portal</h1>
+    <p>Post, view, update and manage research opportunities in one place</p>
+  </header>
+
+  <main>
+    <div id="message" class="message hidden" role="alert"></div>
+
+    <!-- Create / Edit form -->
+    <section class="card">
+      <h2 id="formTitle">Post a New Research Opportunity</h2>
+
+      <form id="opportunityForm" novalidate>
+        <div class="grid">
+          <div class="field full">
+            <label for="title">Research Title *</label>
+            <input type="text" id="title" maxlength="200" />
+            <span class="error" data-error-for="title"></span>
+          </div>
+
+          <div class="field full">
+            <label for="description">Research Description *</label>
+            <textarea id="description" rows="3"></textarea>
+            <span class="error" data-error-for="description"></span>
+          </div>
+
+          <div class="field">
+            <label for="research_area">Research Area *</label>
+            <input type="text" id="research_area" maxlength="100" />
+            <span class="error" data-error-for="research_area"></span>
+          </div>
+
+          <div class="field">
+            <label for="faculty_name">Faculty Member's Name *</label>
+            <input type="text" id="faculty_name" maxlength="100" />
+            <span class="error" data-error-for="faculty_name"></span>
+          </div>
+
+          <div class="field">
+            <label for="department">Department *</label>
+            <input type="text" id="department" maxlength="100" />
+            <span class="error" data-error-for="department"></span>
+          </div>
+
+          <div class="field">
+            <label for="required_skills">Required Skills *</label>
+            <input type="text" id="required_skills" maxlength="255" placeholder="e.g. Python, SQL" />
+            <span class="error" data-error-for="required_skills"></span>
+          </div>
+
+          <div class="field">
+            <label for="positions">Available Positions *</label>
+            <input type="number" id="positions" min="1" step="1" />
+            <span class="error" data-error-for="positions"></span>
+          </div>
+
+          <div class="field">
+            <label for="deadline">Application Deadline *</label>
+            <input type="date" id="deadline" />
+            <span class="error" data-error-for="deadline"></span>
+          </div>
+
+          <div class="field">
+            <label for="status">Status *</label>
+            <select id="status">
+              <option value="Open">Open</option>
+              <option value="Closed">Closed</option>
+            </select>
+            <span class="error" data-error-for="status"></span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="submitBtn" class="btn btn-primary">Post Opportunity</button>
+          <button type="button" id="cancelBtn" class="btn btn-secondary hidden">Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- List -->
+    <section class="card">
+      <h2>All Research Opportunities</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Faculty</th>
+              <th>Department</th>
+              <th>Positions</th>
+              <th>Deadline</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="opportunityList"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Details popup -->
+  <div id="detailsModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="modal-close" aria-label="Close">&times;</button>
+      <h2>Opportunity Details</h2>
+      <div id="detailsBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
